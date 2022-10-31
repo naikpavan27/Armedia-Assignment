@@ -1,0 +1,24 @@
+<div class="post-card-grid">
+    <div class="album py-5">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col" *ngFor="let post of posts">
+              <div class="card" (click)="navitageToPostDetails(post)">
+                <!-- <h5 class="card-header">Jaun first</h5> -->
+                  <div class="card-body">
+                    <!-- Post Title -->
+                    <h5 class="card-title">{{post.title}}</h5>
+                    <!-- Post Info -->
+                    <p class="card-text">{{post.info}}</p>
+                    <!-- Post date -->
+                    <p class="date-text">{{post.date}}</p>
+                    <div class="btn-group-cntr">
+                      <a class="btn btn-dark" *ngIf="!post.isfeaturedPost" (click)="$event.stopPropagation();addPostToFeaturedPosts(post)">Add to feature</a>
+                    </div>
+                  </div>
+                </div>
+            </div>    
+          </div>
+        </div>
+    </div>
+</div>

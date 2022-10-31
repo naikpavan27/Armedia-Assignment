@@ -1,0 +1,18 @@
+.post-card-grid{
+    .card-body{
+        box-shadow: 1px 1px 18px -4px #888888;
+        position: relative;
+        min-height: 300px;
+    }
+    .image-title-grid{  
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        padding-bottom: 15px;
+        .img-grid{
+            width: 30%;
+        }
+        .title-heading{
+            width: 70%;
+            padding-left: 30px;
+        }
+    }
+}

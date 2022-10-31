@@ -1,0 +1,38 @@
+<div class="post-card-grid">
+    <div class="album py-5 bg-light min-height">
+        <div class="container">
+          <div class="row justify-content-center">
+                <!-- Page Heading -->
+            <h1 class="fw-normal text-center mb-5">Post  Details</h1>
+            <div class="col-lg-10"  *ngIf="post">
+                <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex image-title-grid">
+                        <!-- Post Image -->
+                        <div class="img-grid">
+                          <img [src]="post.icon" class="card-img-top" alt="...">
+                        </div>
+                        <!-- Post heading -->
+                        <div class="title-heading">
+                          <h5 class="card-title">{{post.title}}</h5>
+                          <p class="date-text">{{post.date}}</p>
+                        </div>
+                        
+                      </div>
+                      <!-- Post Full description  -->
+                      <p class="card-text mt-2">{{post.fullDescription}}</p>
+                      <!-- Add to featured button  -->
+                      <div class="btn-group-cntr" *ngIf="!post.isfeaturedPost">
+                        <a class="btn btn-dark" (click)="addPostToFeaturedPosts(post)">Add to feature</a>
+                      </div>
+                    </div>
+                </div>
+            </div> 
+            <!-- If post data is not found -->
+            <div class="text-center" *ngIf="!post">
+              <h4 class="fw-normal">Blog Post not found</h4>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="contact-page-grid">
+    <div class="py-5 bg-light min-height">
+        <h1 class="fw-normal text-center mb-5">Contact Us</h1>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <form [formGroup]="contactUsForm" (ngSubmit)="submitContactUsForm(contactUsForm)" autocomplete="off">
+                        <div class="row">
+                            <!-- Email FormControl -->
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label required">Email</label>
+                                    <input type="email"  formControlName="email" class="form-control" id="email" placeholder="Enter your email">
+                                    <span class="text-danger"
+                                        *ngIf="submitted && contactUsFormControl?.email?.errors?.required">
+                                        Email is required
+                                    </span>
+                                    <span class="text-danger"
+                                        *ngIf="submitted && contactUsFormControl?.email?.status === 'INVALID'">
+                                        Please enter a valid email address
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Name FormControl -->
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="test" formControlName="name" class="form-control" id="name" placeholder="Enter your name">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Message FormControl -->
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1" class="form-label required">Message</label>
+                                    <textarea formControlName="message" placeholder="Enter your message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <span class="text-danger"
+                                        *ngIf="submitted && contactUsFormControl?.message?.errors?.required">
+                                        Message is required
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Form Submit button -->
+                        <div class="row">
+                            <div class="col d-flex justify-content-end">
+                                <button type="submit" class="btn btn-dark">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

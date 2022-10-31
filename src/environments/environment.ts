@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  userName: "Pavan Kumar",
+  userImage: "https://cdn-icons-png.flaticon.com/512/236/236832.png",
+  userInfo: "You can enhance user Segmentation and Remarketing Audiences by importing user information stored outside of Analytics",
+  title: 'Local Environment',
+  apiURL: 'http://localhost:4200'
 };
 
 /*

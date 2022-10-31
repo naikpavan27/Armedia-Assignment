@@ -1,0 +1,19 @@
+<div class="home-page-grid">
+  <section class="py-5 text-center container">
+      <div class="row">
+        <div class="col-lg-6 col-md-8 mx-auto user-image-grid">
+          <!-- User image -->
+          <img class="user-image" [src]="userImage">
+          <!-- User info -->
+          <p class="lead text-muted">{{userInfo}}</p>
+        </div>
+      </div>
+    </section>
+  <!-- Featured posts -->
+  <div class="featured-posts-grid">
+    <!-- Heading -->
+    <h1 class="feature-post-heading fw-normal">Featured Posts</h1>
+      <!-- Render Blog's Featured posts-->
+      <app-post-card [posts]="featuredPosts"></app-post-card>
+  </div>
+</div>
