@@ -75,7 +75,7 @@
               ],
               "outputHashing": "all"
             },
-            "developer": {
+            "dev": {
               "budgets": [
                 {
                   "type": "initial",
@@ -119,8 +119,8 @@
             "qa": {
               "browserTarget": "blog-post:build:qa"
             },
-            "developer": {
-              "browserTarget": "blog-post:build:developer"
+            "dev": {
+              "browserTarget": "blog-post:build:dev"
             }
           },
           "defaultConfiguration": "development"
